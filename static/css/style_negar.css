@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+.header_height{
+    height: 8%;
+}
+.list ul{
+    list-style-type: none;
+}
+.list li{
+    display: inline;
+    margin-left: 2%;
+}
+
+.text_slide{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10vw;
+    font-family: cursive;
+}
+.search{
+    background-color: #0b024a;
+    height: 20%;
+    color: white;
+    font-family: cursive;
+    font-size: 1.8vw;
+
+}
+.search input[type=text],input[type=date],select{
+    background-color: #0b024a;
+    border: solid gray 1px;
+}
+
+.main{
+    position: relative;
+}
+.money{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.img-top2{
+    margin-left: 10%;
+}
