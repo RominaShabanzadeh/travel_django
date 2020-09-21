@@ -38,12 +38,27 @@
                         <a class="dropdown-item" href="#">Link 2</a>
                         <a class="dropdown-item" href="#">Link 3</a></div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-black-50" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled text-black-50" href="#">Contact</a>
-                </li>
+
+                {% if user.is_athenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-black-50" href="{% url 'logout' %}">logout</a>
+                    </li>
+
+                    <li class="nav-item">
+                            <a class="nav-link disabled text-black-50" href="#">profile</a>
+                    </li>
+
+                    {% else %}
+                        <li class="nav-item">
+                        <a class="nav-link text-black-50" href="{% url 'login' %}">login</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-black-50" href="{% url 'register' %}">register</a>
+                        </li>
+                {% endif %}
+
+
             </ul>
         </div>
 
