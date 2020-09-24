@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
@@ -9,3 +10,4 @@ class travel_mdl(models.Model):
     date=models.DateField()
     time=models.TimeField()
     price=models.CharField(max_length=30)
+    user=models.ForeignKey(User,on_delete=models.CASCADE,default="")

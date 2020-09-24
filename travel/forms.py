@@ -6,4 +6,4 @@ from travel.models import travel_mdl
 class travel_frm(forms.ModelForm):
     class Meta():
         model=travel_mdl
-        fields='__all__'
+        fields=['name','origin','destination','date','time','price']

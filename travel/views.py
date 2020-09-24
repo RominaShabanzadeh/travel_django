@@ -16,7 +16,9 @@ def create_travel(request):
     if request.method=="POST":
         form=travel_frm(request.POST)
         if form.is_valid():
-            form.save()
+            f=form.save(commit=False)
+            f.user_id=request.user.id
+            f.save()
     return render(request,'register_travel.html',{'form':form})
 
 def register(request):
@@ -26,3 +28,10 @@ def register(request):
         if form.is_valid():
             form.save()
     return render(request,'registration/register.html',{'form':form})
+
+
+def edit_travel(request):
+    pass
+
+def delete_travel(request):
+    pass

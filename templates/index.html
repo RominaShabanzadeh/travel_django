@@ -93,6 +93,9 @@
                     <p class="float-left ml-3 text-secondary">Destination: {{ travel.destination }}</p>
                     <p class="text-secondary mr-3 float-right">Date: {{ travel.date }}</p>
                     <p class="text-secondary mr-3 float-left">Time: {{ travel.time }}</p>
+                    <a class="btn btn-info" href="{% url 'edit_travel' %}">Edit</a>
+                    <a class="btn btn-info" href="{% url 'delete_travel' %}">Delete</a>
+                    <a class="btn btn-info" href="">Read more</a>
                 </div>
             </div>
 
